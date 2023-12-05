@@ -19,7 +19,7 @@ jobs:
   deploy:
     name: "Deploy bundle"
     runs-on: ubuntu-latest
-    environment: env
+    environment: e2-demo-west-env
 
     steps:
       - uses: actions/checkout@v3
@@ -35,7 +35,7 @@ jobs:
   pipeline_update:
     name: "Run pipeline update"
     runs-on: ubuntu-latest
-    environment: env
+    environment: e2-demo-west-env
 
     needs:
       - deploy
